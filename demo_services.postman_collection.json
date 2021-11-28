@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "311aa8c6-c626-4c75-b60e-a34930fd6bb4",
+		"name": "demo_services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "upload",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "password",
+						"username": "admin"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": "http://localhost:8080/upload"
+			},
+			"response": []
+		},
+		{
+			"name": "list_files",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:8080/files"
+			},
+			"response": []
+		},
+		{
+			"name": "search_files_with_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:8080/files/1a63ddd2-453a-4bf0-a665-b846f1e02757"
+			},
+			"response": []
+		},
+		{
+			"name": "deleted_files",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:8080/delete/1a63ddd2-453a-4bf0-a665-b846f1e02757"
+			},
+			"response": []
+		}
+	]
+}
